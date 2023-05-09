@@ -1,0 +1,135 @@
+* {
+  margin:0px;
+  padding: 0px;
+}
+
+#user-logo {
+  width: 50px;
+  height: 2em;
+  border-radius: 100%;
+}
+
+.left-sidebar {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 60px;
+  z-index: 1000;
+  height: 100vh;
+  background-color: #12171e;
+  /* padding-left: 1rem; */
+  transition: all 0.5s ease
+
+}
+
+/* .left-sidebar.active ~ .main-content{ */
+/*   /1* width:500px; *1/ */
+/*   left: 250px; */
+/*   width: calc(100%-250px); */
+/* } */
+
+/* causes the side bar to expand on toggling */
+.left-sidebar.active {
+  width: 250px;
+}
+
+.left-sidebar #phoenix-name {
+  opacity: 0;
+  /* display: none; */
+}
+.left-sidebar.active #phoenix-name {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  opacity: 1;
+  /* display: inline; */
+  transition : all 0.25s ease ;
+  transition-delay : 0.5s;
+
+}
+
+/* side bar toggle button */
+.top .toggle-button i {
+  /* position: relative; */
+  /* left: 10px; */
+  /* top: 0px; */
+
+  /* padding-left: 5px; */
+  margin-left: 0.5rem;
+
+  font-size: 2rem;
+  /* margin-right: 5px; */
+}
+
+.left-sidebar ul {
+  padding-left: 15px;
+}
+
+/* individual list items */
+.left-sidebar ul li {
+  list-style-type: none;
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  width:90%;
+  font-size: 1.25rem;
+  /* display:flex; */
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
+  /* justify-content: center; */
+  /* align-items: center; */
+
+}
+
+
+/* anchor tags */
+.left-sidebar ul li a {
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+}
+
+.left-sidebar ul li a:hover {
+  background-color: #fff;
+  color: #12171e;
+}
+
+.left-sidebar ul li a i {
+  /* min-width: 50px; */ 
+  /* text-align: center; */
+}
+
+
+.left-sidebar .nav-item {
+  /* opacity: 0; */
+  display: none;
+}
+
+.left-sidebar.active .nav-item {
+  /* opacity: 1; */
+  display: inline-block;
+  margin-left: 15px;
+  /* opacity: 1; */
+  /* transition: all 0.25s ease-out; */
+  /* transition-delay: 0.5s; */
+}
+
+
+.left-sidebar ul li .tooltip {
+  position:relative;
+  top:-3rem;
+  left:3.5rem;
+  display:none;
+  background: none;
+
+}
+
+.left-sidebar ul li:hover .tooltip {
+  background: black;
+  display: inline-block;
+}
+
+
+.left-sidebar.active ul li .tooltip {
+  display:none;
+
+}

@@ -45,11 +45,11 @@ const SearchBar = (props) => {
 
   return (
     <>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+      <div  id="search-bar">
 
-        <div id="phoenix-name">
-          Phoenix
-        </div>
+        {/* <div id="phoenix-name"> */}
+        {/*   Phoenix */}
+        {/* </div> */}
 
         <form onSubmit={handleSearch}
           style={{
