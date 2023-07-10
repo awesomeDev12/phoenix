@@ -1,0 +1,139 @@
+/* CSS Style */
+
+a {
+  text-decoration: none;
+  color:inherit;
+}
+
+
+
+.top-bar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 55px;
+  background: #3D3846;
+  width: 100vw;
+  padding-left: 0.5em;
+  padding-top: 0.05em;
+  z-index: 999;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.top-bar-right {
+  padding-left: 1rem;
+  font-size: 2rem;
+  padding-right: 2em;
+  /* margin-right: 50px; */
+
+}
+
+/* #github-icon { */
+/*   color:white; */
+/* } */
+
+#search-bar-input {
+  height: 1.4em;
+  background: #241F31;
+  color: white;
+  padding-left: 2.8em;
+  /* margin-top: 10px; */
+  /* margin-bottom: 10px; */
+  /* margin-bottom: 0.1em; */
+  border-top-left-radius: 1.5em;
+  border-bottom-left-radius: 1.5em;
+  border-top-right-radius: 1.5em;
+  border-bottom-right-radius: 1.5em;
+  font-size: 1.3em;
+  width: 20em;
+
+}
+
+#search-explore {
+  display:grid ;
+  grid-gap:1em;
+  margin: 0.5em;
+
+}
+
+.explore-page {
+  display:grid ;
+  grid-gap:1em;
+  margin: 0.5em;
+}
+
+.top-bar .phoenix-name {
+  color:white;
+  font-size: 2em;
+  font-family: monospace;
+  text-align: center;
+  padding-left: 1.2em;
+}
+
+#search-bar-search-icon {
+  position: relative;
+  top: 0.23em;
+  left: 1.5em;
+  font-size: 1.3em;
+  color: #777777;
+}
+
+input::placeholder {
+  color: #ccc;
+  font-style: italic;
+}
+
+@media (max-width: 576px) {
+
+  .top-bar {
+    padding-left: 0em;
+  }
+
+  #search-explore {
+    grid-template-columns: 1fr;
+  }
+
+  .explore-page {
+    grid-template-columns: 1fr;
+  }
+
+  #search-bar-input {
+    width: 14em;
+  }
+
+  .top-bar .phoenix-name {
+    display:none
+    /* font-size: 1.7em; */
+    /* padding-left: 0.4em; */
+  }
+
+  .top-bar .top-bar-right {
+    display: none;
+  }
+}
+
+
+@media (min-width: 576px) and (max-width: 1000px) {
+  #search-explore {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .explore-page {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+@media (min-width: 1000px) {
+  #search-explore {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .explore-page {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
