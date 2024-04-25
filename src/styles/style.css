@@ -12,10 +12,16 @@ a {
   top: 0px;
   left: 0px;
   height: 55px;
-  background: #3D3846;
+  background: #1F1D2A;
+
+  border: 2px groove rgb(206, 206, 206);
+  border-radius: 10px;
+
   width: 100vw;
   padding-left: 0.5em;
   padding-top: 0.05em;
+  margin-left: 2px;
+  margin-right: 2px;
   z-index: 999;
 
   display: flex;
