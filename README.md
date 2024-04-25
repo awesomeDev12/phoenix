@@ -48,8 +48,8 @@ npm run dev
 
 ## Author
 
-<a href = "https://anirbandey.net" style="text-decoration: none; color: inherit;">Anirban Dey</a>
+<a href = "https://anirbandey.profiles.soufrabi.com" style="text-decoration: none; color: inherit;">Anirban Dey</a>
 
 ## License
 
-This project is licensed under the GNU Affero General Public License v3.0 - see the [LICENSE](./LICENSE.md) file for details
+This project is licensed under the GNU Affero General Public License v3.0 - see the [LICENSE](./LICENSE) file for details
