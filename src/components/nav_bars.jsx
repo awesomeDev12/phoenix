@@ -1,7 +1,5 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React, { useMemo } from "react";
 import { useSelector,useDispatch } from "react-redux";
-import { styles } from "./styles";
 import { generalActions } from "../store/general";
 
 const SideBarLeft = () => {
@@ -9,26 +7,18 @@ const SideBarLeft = () => {
   const dispatch = useDispatch()
 
   const enabled = useSelector(state => state.general.sideBarEnabled)
-  const [display, setDisplay] = useState('none')
-  const [width,setWidth] = useState('0px')
-  // const [navItemOpacity,setNavItemOpacity] = useState('1')
-  const [navItemDisplay,setNavItemDisplay] = useState("none")
 
-  useEffect(()=>{
-    if(enabled){
-      setDisplay('block')
-      setWidth("170px")
-      // setNavItemOpacity('1')
-      setNavItemDisplay('block')
-    }else {
-      setDisplay('none')
-      setWidth("0px")
-      // setNavItemOpacity('1')
-      setNavItemDisplay('none')
-    }
-  }
-  ,[enabled])
+  const width = useMemo(()=>{
+    return (enabled) ? '170px' : '0px'
+  },[enabled])
 
+  const display = useMemo(()=>{
+    return (enabled) ? 'block' : 'none'
+  },[enabled])
+
+  const navItemDisplay = useMemo(()=> {
+    return (enabled) ? 'block' : 'none'
+  },[enabled])
 
   return (
     <>
