@@ -57,10 +57,13 @@ const FrontEnd = () => {
       }
   }
 
+  useEffect( ()=>{
+      invidious_api.initInstance()
+      
+  },[])
   useEffect(()=>{
 
       window.matchMedia("(orientation: portrait)").addEventListener("change", handleOrientationChange)
-      invidious_api.getLatestInstanceList()
 
       return ()=>{
         window.matchMedia("(orientation: portrait)").removeEventListener("change", handleOrientationChange)

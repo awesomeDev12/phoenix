@@ -5,6 +5,15 @@ const saveInLocalStorage = (key, data) => {
   localStorage.setItem(key, JSON.stringify(data));
 }
 
+const checkExistsInLocalStorage = (key) =>{
+  const retrieved = localStorage.getItem(key);
+  return ( retrieved != null )
+}
+
+const loadFromLocalStorageWithoutDefaults = (key) => {
+  const retrieved = JSON.parse(localStorage.getItem(key));
+  return retrieved
+}
 const loadFromLocalStorage = (key, defaults) => {
   const retrieved = JSON.parse(localStorage.getItem(key));
   if (retrieved != null) {
@@ -18,4 +27,4 @@ const loadFromLocalStorage = (key, defaults) => {
 }
 
 
-export {saveInLocalStorage,loadFromLocalStorage}
+export {saveInLocalStorage,loadFromLocalStorage,loadFromLocalStorageWithoutDefaults,checkExistsInLocalStorage}
