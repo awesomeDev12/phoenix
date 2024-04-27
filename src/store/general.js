@@ -9,6 +9,7 @@ const generalSlice = createSlice({
     // orientationPortrait: false
     orientationPortrait: isOrientationPortrait(),
     touchEnabled: isTouchEnabled(),
+    sideBarEnabled: false,
   },
   reducers: {
     changePage(state,action){
@@ -19,7 +20,20 @@ const generalSlice = createSlice({
     updateOrientationPortrait(state,action){
         const newOrientation = action.payload
         state.orientationPortrait = newOrientation
-    }
+    },
+    toggleSideBarEnabled(state){
+      if(state.sideBarEnabled){
+        state.sideBarEnabled = false
+      }else {
+        state.sideBarEnabled = true
+      }
+    },
+    enableSideBar(state){
+      state.sideBarEnabled = true
+    },
+    disableSideBar(state){
+      state.sideBarEnabled = false
+    },
   }
 
 })

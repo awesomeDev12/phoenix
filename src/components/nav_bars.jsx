@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { useSelector,useDispatch } from "react-redux";
 import { styles } from "./styles";
@@ -7,35 +7,36 @@ import { generalActions } from "../store/general";
 const SideBarLeft = () => {
 
   const dispatch = useDispatch()
-  const [width,setWidth] = useState('50px')
+
+  const enabled = useSelector(state => state.general.sideBarEnabled)
+  const [display, setDisplay] = useState('none')
+  const [width,setWidth] = useState('0px')
   // const [navItemOpacity,setNavItemOpacity] = useState('1')
   const [navItemDisplay,setNavItemDisplay] = useState("none")
 
-  const handleToggleButton = () => {
-
-    console.log("Toggle SideBarLeft")
-
-    if (width === "50px"){
+  useEffect(()=>{
+    if(enabled){
+      setDisplay('block')
       setWidth("170px")
       // setNavItemOpacity('1')
       setNavItemDisplay('block')
-    } else if( width === "170px"){
-      setWidth("50px")
+    }else {
+      setDisplay('none')
+      setWidth("0px")
       // setNavItemOpacity('1')
       setNavItemDisplay('none')
     }
-
-
   }
+  ,[enabled])
 
 
   return (
     <>
-      <div className="side-bar-left" style={{width:width}}>
+      <div className="side-bar-left" style={{width:width, display:display}}>
 
         <div className="top">
           <div className="toggle-button">
-            <i onClick={() => { handleToggleButton() }} className="bx bx-menu" id="left-side-bar-toggle-btn" />
+            <i onClick={() => { dispatch(generalActions.disableSideBar())  }} className="bx bx-menu" id="left-side-bar-toggle-btn" />
           </div>
         </div>
 

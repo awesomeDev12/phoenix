@@ -22,13 +22,21 @@ a {
   padding-top: 0.05em;
   margin-left: 2px;
   margin-right: 2px;
-  z-index: 999;
+  z-index: 10;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
 }
+
+.top-bar .side-bar-left-toggle-button i {
+  font-size: 300%;
+}
+
+/* .top-bar-left {
+  
+} */
 
 .top-bar-right {
   padding-left: 1rem;
@@ -72,6 +80,7 @@ a {
   margin: 0.5em;
 }
 
+
 .top-bar .phoenix-name {
   color:white;
   font-size: 2em;
@@ -111,7 +120,7 @@ input::placeholder {
     width: 14em;
   }
 
-  .top-bar .phoenix-name {
+  .top-bar .top-bar-left {
     display:none
     /* font-size: 1.7em; */
     /* padding-left: 0.4em; */

@@ -2,13 +2,13 @@
 
 .side-bar-left {
     position:fixed;
-
+    z-index: 100;
     /* background: black; */
     background: #140F21  ;
-    left:2px;
-    top: 55px;
+    left:0px;
+    top: 0px;
     height: 100vh;
-    width:50px;
+
     z-index: 15;
     border-radius: 15px;
     border: 2px groove rgb(200, 200, 200);
@@ -16,13 +16,15 @@
 }
 
 .side-bar-left .toggle-button {
-    margin-left: 0.15em;
+    margin-top: 0.3em;
+    margin-left: 0.6em;
 }
 
 .side-bar-left i {
     font-size: 200%;
 }
 
+/* toggle-button icon size  */
 .side-bar-left .top i {
     font-size: 300%;
 }
