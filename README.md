@@ -48,7 +48,7 @@ npm run dev
 
 ## Author
 
-<a href = "https://anirbandey.profiles.soufrabi.com" style="text-decoration: none; color: inherit;">Anirban Dey</a>
+<a href = "https://andy.soufrabi.com" style="text-decoration: none; color: inherit;">Anirban Dey</a>
 
 ## License
 
